@@ -1,0 +1,312 @@
+  
+  /* 
+  ==================================================
+  - Header 
+  ==================================================
+  */
+  header{
+      position: fixed;
+      top: 0px;
+      padding: 20px 0;
+      width: 100%;
+      height: 130px;
+      color: #fff;
+      background-color: transparent;
+      transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      z-index:1000;
+  }
+  
+  header.stick {
+      height: 50px;
+      text-align: left;
+      padding: 10px 0 !Important;
+      transition: all 0.4s ease-in-out;   
+      -webkit-transition: all 0.4s ease-in-out;
+      background: rgba(22,22,22,0.8);
+      backdrop-filter: blur(10px);
+  }
+  
+      .wrap-container {
+          padding-left: 15px;
+          padding-right: 15px;
+      }
+  
+      .branding {
+          width: 25%;
+          float: left;
+          text-align: left;
+          height: 90px;
+          transition: all 0.4s ease-in-out;
+          -webkit-transition: all 0.4s ease-in-out;    
+      }
+      
+      .branding.stick {
+          height: 30px;
+          transition: all 0.4s ease-in-out;
+          -webkit-transition: all 0.4s ease-in-out;    
+      }
+  
+          .logo-lg {
+              max-width: 60px;
+              height: 100%;
+          }
+  
+          .logo-sm {
+              max-width: 60px;
+              height: 100%;
+              display: none;
+          }
+  
+      .menu {
+          width: 75%;
+          float: left;
+          text-align: right;
+          height: 90px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+      }
+
+      .sleak{
+        height: 42px;
+      }
+  
+      .listMenu { 
+          display: none;
+      }
+  
+  /* just for the example, delete this */
+  
+  .stripe {
+      height: 400px;
+      position: relative;
+  }
+  
+  .stripe:first-child {
+      height: 600px;
+      position: relative;
+  }
+  
+  .stripe:nth-child(even) {
+      background: #ecc6d9;
+  }
+  
+  /* 
+  ==================================================
+  - The Mobile Menu
+  ==================================================
+  */
+  
+  /* The Menu Button */
+  .mobileMenuButton {
+      display: inline-block;
+      position: relative;
+      width: 30px;
+      height: 34px;
+      z-index: 1000;
+      border-radius: 4px;
+      transition: all 0.4s ease;
+      -webkit-transition: all 0.4s ease;
+      
+  }
+  
+  .mobileMenuButton:hover {
+      border:1px solid #000;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 4px;
+  }
+  
+  .mobileMenuButton:active {
+      border:1px solid #000;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 4px;
+  }
+  
+  .mobileMenuButton:hover span  {
+      background: #fff;
+  }
+  .mobileMenuButton:hover span:before  {
+      background: #fff;
+  }
+  .mobileMenuButton:hover span:after  {
+      background: #fff;
+  }
+  
+  
+  .mobileMenuButton span {
+      margin-top: 50%;
+  }
+  .mobileMenuButton span, .mobileMenuButton span:before, .mobileMenuButton span:after {
+      cursor: pointer;
+      border-radius: 5px;
+      height: 4px;
+      width: 22px;
+      background: #262626;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      content: '';
+  }
+  .mobileMenuButton span:before {
+      top: -8px;
+  }
+  .mobileMenuButton span:after {
+      bottom: -8px; 
+  }
+  
+  
+  
+  /* The Menu */
+  .mobileMenu { 
+      width: 240px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #d6d6c2;
+      z-index: 1200;
+      text-align: right;
+      padding-top: 100px ;
+      transition: all .3s ease-in-out;
+      
+  }
+  
+      .slideOut { 
+          margin-right: -240px;
+          transition: all .3s ease-in-out;
+      }
+  
+      .slideIn { 
+          margin-right: 0px;
+      }
+  
+  .mobileMenu h2 {
+      font-family: sans-serif;
+      color: #333333;
+      font-size: 36px;
+      padding-right: 30px;
+      margin-bottom: 30px;
+  }
+  
+  .mobileMenu ul {
+      list-style: none;
+  }
+  
+  
+  .mobileMenu li { 
+      border-bottom: 1px dotted black;
+      padding: 0 30px;
+  }
+  
+  .mobileMenu li a { 
+      color: #333333;
+      line-height: inherit;
+      padding: 0;
+      font-weight: 600;
+      padding: 12px 0;
+      font-size: 15px;
+      text-decoration: none;
+      font-family: sans-serif;
+      display: block;
+      /* CSS Transition */
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+  }
+  
+  .mobileMenu li a:hover {
+      color: #6F4BD3;
+      text-decoration: none;
+  }
+  
+  
+  .overlay {
+      background:rgba(0,0,0,0.7);
+      width:100%;
+      height:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      display:none;
+      opacity: 0;
+      position: fixed;
+      transition: all .3s ease-in-out;
+      z-index: 1150;    
+  }
+  
+  
+  
+  
+  /* 
+  ==================================================
+  - Media Query Mobile First Aproach
+  ==================================================
+  */
+  @media (min-width:769px) {
+      h1 {
+          font-size: 2em;
+      }
+  
+      .overlay {
+          display: none !important;
+      }
+      
+      .mobileMenu {
+          display: none;
+      }
+      
+      .wrap-container {
+              width: 80%;
+              margin: 0 auto;
+      }
+      
+      .mobileMenuButton {
+          display:none;
+      }
+      
+      .listMenu { 
+          display: inherit;
+      }
+  
+      .listMenu li {
+          display: inline;
+          padding: 0px 15px;
+      }
+      
+  
+      .listMenu li a {
+        font-family: 'Outfit', sans-serif;
+          color: #F2F2F2;
+          line-height: inherit;
+          padding: 0;
+          font-weight: 500;
+          font-size: 1rem;
+          text-decoration: none;
+          font-family: sans-serif;
+          display: inline-block;
+          /* CSS Transition */
+          -webkit-transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          -ms-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+      }
+  
+      
+      .listMenu li a:hover {
+          color: #6F4BD3;
+          text-decoration: none;
+      }
+      
+      .mobileButton {
+          display: none;
+      }
+      
+  }
+  

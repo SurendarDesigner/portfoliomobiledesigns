@@ -1,0 +1,45 @@
+div class="product-detail">
+            <ul>
+              <li class="detail-title">Voice Commands and Navigation:</li>
+              <li class="detail-content">Deluxe is built on a sophisticated natural language processing (NLP) engine, enabling users to interact with the platform using their voice.</li>
+            </ul>
+            <ul>
+              <li class="detail-title">Movies and TV Shows</li>
+              <li class="detail-content">Deluxe boasts an extensive library of movies and TV shows, catering to a wide range of genres and interests.</li>
+            </ul>
+            <ul>
+              <li class="detail-title">Music Streaming:</li>
+              <li class="detail-content">Users can ask VoiceFlix to play songs, albums, or playlists using simple voice commands.</li>
+            </ul>
+            <ul>
+              <li class="detail-title">Personalized Recommendations</li>
+              <li class="detail-content">Leveraging AI algorithms, VoiceFlix understands user preferences based on their viewing and listening history.</li>
+            </ul>
+            <ul>
+              <li class="detail-title">Watchlist and Downloads</li>
+              <li class="detail-content">Users can download movies and music to their mobile devices for offline viewing and listening.</li>
+            </ul>
+            <ul>
+              <li class="detail-title">Language Support</li>
+              <li class="detail-content">Deluxe was designed to support multiple languages, making it accessible to a global audience. Users can interact with the platform using their preferred language, ensuring a more inclusive experience.</li>
+            </ul>
+          </div>
+
+
+          .product-detail{
+            width: 50%;
+            & ul{
+                list-style-type: none;
+                padding: 0 0 2rem 0;
+                border-bottom: 1px solid $portfolio-section-low-contrast;
+              & > li:nth-child(1){
+                font-size: map-get($font-sizes, font-22);
+                color: $portfolio-content-high-contrast;
+              }
+              & > li:nth-child(2){
+                font-size: map-get($font-sizes, font-18);
+                color: $portfolio-content-low-contrast;
+              }
+            }
+        }
+        
